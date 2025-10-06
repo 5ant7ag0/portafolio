@@ -2,13 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 /*---------CSS Variables----------*/
-:root{
-    --header-height: 3.5rem; /*Altura del header rem etiqueta de medida */ 
+:root {
+    --header-height: 3.5rem;
+    /*Altura del header rem etiqueta de medida */
     /*-------COLORES---------*/
-    --primary-color: #4a4a4a; /*Color principal*/
-    --primary-color-alt: #575757; /*Color alternativo*/
-    --linear-gradient: linear-gradient(54deg, rgba(96,96,96,0.7)34%,
-    rgba(96,96,96,0.70));
+    --primary-color: #4a4a4a;
+    /*Color principal*/
+    --primary-color-alt: #575757;
+    /*Color alternativo*/
+    --linear-gradient: linear-gradient(54deg, rgba(96, 96, 96, 0.7)34%,
+            rgba(96, 96, 96, 0.70));
     --title-color: #4a4a4a;
     --text-color: #555;
     --text-color-alt: #999;
@@ -19,6 +22,163 @@
     /*--------------FUENTE Y TIPOGRAFIA--------*/
 
     --roboto-font: 'Roboto', san-serif;
-    --mono-font: 'Roboto Mono',  monospace;
+    --mono-font: 'Roboto Mono', monospace;
+    --fs-h1: 2.75rem;
+    /* multiplica con la medida padre*/
+    --fs-h2: 1.25rem;
+    --fs-lg: 1.125rem;
+    /*Tamaño de fuente grande*/
+    --fs-base: 1rem;
+    --fs-sm: 0.87rem;
+    --fs-xs: 0.75rem;
 
+    /*---------Font weight---*/
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --black: 900;
+
+}
+
+/*----------CSS Base---------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* incluye el padding y el border en el calculo del ancho de los elementos
+    box model
+    */
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--roboto-font);
+    /*tipo de letra para todo el documento
+    excepto h1,h2,h3,h4,h5,h6
+    */
+    font-size: var(--fs-base);
+    /* Medida base de fuente para todo el documento
+    excepto h1,h2,h3,h4,h5,h6*/
+
+}
+
+body {
+    background-color: var(--bg-color);
+    /* var(--bg-color) #fff color de fondo para todo el documento
+    excepto header y footer*/
+    color: var(--text-color);
+    /* Color de texto para todo el documento
+    excepto header y footer*/
+
+    line-break: 1.5rem;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--mono-font);
+    /* Fuente principal*/
+    font-weight: var(--bold);
+    /*  Grosor de fuente*/
+
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none; /*sin linea en los enlaces*/
+}
+
+button{
+    cursor: pointer; 
+    border: none; 
+    outline: none; 
+    background-color: transparent;
+}
+img{
+    max-width: 100%;/* maximo ancho de las imagenes*/
+    height: auto; /* altura automatica*/
+    
+}
+
+textarea{
+    background: none; /* sin fondo*/
+    border: none; /* sin borde*/
+    outline: none; /* sin contorno*/
+}
+
+/*-------ESTILOS REUSABLES--------*/
+
+.container{
+    /*background: red;*/
+    max-width: 1140px; /* ancho maximo del contenedor*/
+    margin: 0 auto; /* 0 es arriba abajo. auto es paracentrar el contenedor*/
+    padding-left: 0.9rem; /* padding-left: 0.9rem; */
+    padding-right: 0.9rem; /* padding-right: 0.9rem; */
+    
+}
+
+.grid{
+    display: grid;
+    
+}
+
+.section{
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem; 
+}
+
+/*-----------HEADER-------------*/
+
+.header{
+    position: absolute; /* Se puede mover */
+    top: 0;
+    left: 0;
+    width: 100%;  
+    z-index: 100; /* se sobreponga a otros elementos*/  
+}
+
+.nav{
+    /*background-color: red;*/
+    height: calc(var(--header-height) + 0.875rem);
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.nav__list{
+    display: flex; /* Alinea los elementos en fila*/
+    column-gap: 3.25rem;
+}
+
+.nav__links{
+    color: #000000;
+    font-size: 0.9rem;
+    font-weight: var(--bold); /* Grosor de fuente*/
+    font-family: var((--mono-font));
+    text-transform: uppercase; /* Mayusculas*/
+    position: relative;
+    transition: 0.3s; 
+}
+
+.nav__links:hover{ /* Cuando se pasa el mouse por encima*/
+    opacity:0.5;
+}
+
+.nav__list::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -0.5rem;
 }
