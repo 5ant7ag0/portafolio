@@ -20,7 +20,6 @@
     --border-color: #f1f1f1;
 
     /*--------------FUENTE Y TIPOGRAFIA--------*/
-
     --roboto-font: 'Roboto', san-serif;
     --mono-font: 'Roboto Mono', monospace;
     --fs-h1: 2.75rem;
@@ -29,7 +28,7 @@
     --fs-lg: 1.125rem;
     /*Tamaño de fuente grande*/
     --fs-base: 1rem;
-    --fs-sm: 0.87rem;
+    --fs-sm: 0.875rem;
     --fs-xs: 0.75rem;
 
     /*---------Font weight---*/
@@ -41,7 +40,6 @@
 }
 
 /*----------CSS Base---------*/
-
 * {
     margin: 0;
     padding: 0;
@@ -56,10 +54,7 @@ html {
 
 }
 
-body,
-button,
-input,
-textarea {
+body, button, input, textarea {
     font-family: var(--roboto-font);
     /*tipo de letra para todo el documento
     excepto h1,h2,h3,h4,h5,h6
@@ -78,17 +73,13 @@ body {
     /* Color de texto para todo el documento
     excepto header y footer*/
 
-    line-break: 1.5rem;
+    line-height: 1.5rem;
 
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: var(--mono-font);
-    /* Fuente principal*/
     font-weight: var(--bold);
-    /*  Grosor de fuente*/
 
 }
 
@@ -96,60 +87,73 @@ ul {
     list-style: none;
 }
 
-a{
-    text-decoration: none; /*sin linea en los enlaces*/
+a {
+    text-decoration: none;
+    /*sin linea en los enlaces*/
 }
 
-button{
-    cursor: pointer; 
-    border: none; 
-    outline: none; 
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
     background-color: transparent;
 }
-img{
-    max-width: 100%;/* maximo ancho de las imagenes*/
-    height: auto; /* altura automatica*/
-    
+
+img {
+    max-width: 100%;
+    /* maximo ancho de las imagenes*/
+    height: auto;
+    /* altura automatica*/
+
 }
 
-textarea{
-    background: none; /* sin fondo*/
-    border: none; /* sin borde*/
-    outline: none; /* sin contorno*/
+textarea {
+    background: none;
+    /* sin fondo*/
+    border: none;
+    /* sin borde*/
+    outline: none;
+    /* sin contorno*/
 }
 
 /*-------ESTILOS REUSABLES--------*/
 
-.container{
+.container {
     /*background: red;*/
-    max-width: 1140px; /* ancho maximo del contenedor*/
-    margin: 0 auto; /* 0 es arriba abajo. auto es paracentrar el contenedor*/
-    padding-left: 0.9rem; /* padding-left: 0.9rem; */
-    padding-right: 0.9rem; /* padding-right: 0.9rem; */
-    
+    max-width: 1140px;
+    /* ancho maximo del contenedor*/
+    margin: 0 auto;
+    /* 0 es arriba abajo. auto es paracentrar el contenedor*/
+    padding-left: 0.9rem;
+    /* padding-left: 0.9rem; */
+    padding-right: 0.9rem;
+    /* padding-right: 0.9rem; */
+
 }
 
-.grid{
+.grid {
     display: grid;
-    
+
 }
 
-.section{
+.section {
     padding-top: 3.75rem;
-    padding-bottom: 3.75rem; 
+    padding-bottom: 3.75rem;
 }
 
 /*-----------HEADER-------------*/
 
-.header{
-    position: absolute; /* Se puede mover */
+.header {
+    position: absolute;
+    /* Se puede mover */
     top: 0;
     left: 0;
-    width: 100%;  
-    z-index: 100; /* se sobreponga a otros elementos*/  
+    width: 100%;
+    z-index: 100;
+    /* se sobreponga a otros elementos*/
 }
 
-.nav{
+.nav {
     /*background-color: red;*/
     height: calc(var(--header-height) + 0.875rem);
     display: flex;
@@ -157,28 +161,20 @@ textarea{
 
 }
 
-.nav__list{
-    display: flex; /* Alinea los elementos en fila*/
+.nav__list {
+    display: flex;
+    /* Alinea los elementos en fila*/
     column-gap: 3.25rem;
 }
 
-.nav__links{
+.nav__links {
     color: #000000;
     font-size: 0.9rem;
-    font-weight: var(--bold); /* Grosor de fuente*/
+    font-weight: var(--bold);
+    /* Grosor de fuente*/
     font-family: var((--mono-font));
-    text-transform: uppercase; /* Mayusculas*/
+    text-transform: uppercase;
+    /* Mayusculas*/
     position: relative;
-    transition: 0.3s; 
-}
-
-.nav__links:hover{ /* Cuando se pasa el mouse por encima*/
-    opacity:0.5;
-}
-
-.nav__list::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -0.5rem;
+    transition: 0.3s;
 }
