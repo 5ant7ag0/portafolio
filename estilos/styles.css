@@ -357,13 +357,13 @@ textarea {
     width: 100%;
     height: 100%;
     animation: services__dot 2s linear infinite;
-    animation-play-state: running;
+    animation-play-state: paused; /* Inicia la animacion */
 
 }
 .services__item:hover .services__dot { /* Pausa la animacion al pasar el mouse por encima */
-    animation-play-state: paused;
+    animation-play-state: running;
 }
-@keyframes services__dot { /* Animacion de la rueda */
+@keyframes services__dot { /* funcion Animacion de la rueda */
     0% {
         transform: rotate(0deg); /* Rotacion inicial */
     }
