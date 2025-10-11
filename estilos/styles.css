@@ -325,3 +325,60 @@ textarea {
     align-items: flex-start;
     column-gap: 0.3rem;
 }
+
+/*===========Section Services===============*/
+.services__container { /* Contenedor de servicios en general*/
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+}
+.services__item { /* Cada servicio */
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 1.25rem 1.875rem;
+    text-align: center;
+}
+.icon__box { /* Caja de iconos */
+    border 1px solid var(--border-color);
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    margin: 0% auto;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: flex;
+}
+.services__icon { /* Iconos de servicios */
+    width: 32px;
+    margin: auto;
+}
+.services__dot { /* Punto decorativo rueda */
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    animation: services__dot 2s linear infinite;
+    animation-play-state: running;
+
+}
+.services__item:hover .services__dot { /* Pausa la animacion al pasar el mouse por encima */
+    animation-play-state: paused;
+}
+@keyframes services__dot { /* Animacion de la rueda */
+    0% {
+        transform: rotate(0deg); /* Rotacion inicial */
+    }
+    100% {
+        transform: rotate(360deg); /* Rotacion final */
+    }
+}
+.dot{ /* Punto decorativo rueda */
+    width: 13px;
+    height: 13px;
+    background-color: var(--title-color);
+    position: absolute; /* Posicion absoluta dentro de la caja del icono */
+    border-radius: 50%; /* Hace que el punto sea circular */
+    left: 0.9rem; /* Posicion horizontal a la izquierda */
+}
+.section__title { /* Titulo de seccion */
+    margin-bottom: 0.9rem; /* Margen inferior */
+}
