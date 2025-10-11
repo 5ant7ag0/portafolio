@@ -382,3 +382,47 @@ textarea {
 .section__title { /* Titulo de seccion */
     margin-bottom: 0.9rem; /* Margen inferior */
 }
+
+/*===========Section Resume===============*/
+.resume__container { /* Contenedor del resumen */
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+}
+.resume__title { /* Titulo del resumen */
+    color: var(--text-color-alt);
+    letter-spacing: 0.4em;
+    margin-bottom: 2.8em;
+}
+.resume__item{ /* Cada item del resumen */
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1.6rem;
+    position: relative;
+}
+
+.resume__item:not(:last-child) { /* Margen inferior excepto en el ultimo item */
+    padding-bottom: 3rem;
+}
+
+.resume__item::before { /* Circulo decorativo */
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    left: -0.56rem;
+    background-color: var(--bg-color);
+}
+
+.resume__subtitle { /* Subtitulo del resumen */
+    color: var(--text-color-alt);
+    margin-bottom: 0.36em;
+
+}
+.resume__date { /* Fecha del resumen */
+    color: var(--text-color-alt);
+    margin-bottom: 0.7em;
+}
+.resume__description { /* Descripcion del resumen */
+    text-align: justify;
+}
