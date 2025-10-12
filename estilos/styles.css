@@ -157,6 +157,17 @@ textarea {
     line-height: 1.43em;
 }
 
+.text-xs {  /* Texto extra pequeño */
+    font-size: var(--fs-xs);
+    line-height: 1.5em;
+}
+
+.skills__title, .resume__title { /* Titulo de habilidades y resumen */
+    color: var(--text-color-alt);
+    letter-spacing: 0.4em;
+    margin-bottom: 2.8em;
+}
+
 /*-----------HEADER-------------*/
 
 .header {
@@ -425,4 +436,35 @@ textarea {
 }
 .resume__description { /* Descripcion del resumen */
     text-align: justify;
+}
+
+/*===========Section Skills===============*/
+.skills__container { /* Contenedor de habilidades */
+    grid-template-columns: repeat(2, 445px);
+    column-gap: 7rem;
+}
+
+.skills__list { /* Lista de habilidades */
+    row-gap: 1.8rem;
+}
+
+.skills__titles { /* Titulo de habilidades */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.625rem;
+}
+
+.skills__bar, .skills__percentage { /* Barra y porcentaje de habilidades */
+    height: 5px;
+    border-radius: 0.25rem;
+}
+
+.skills__bar { /* Barra de habilidades (CORREGIR)*/
+    background-color: var(--border-color);
+    margin-bottom: 1.25rem;
+}
+
+.skills__percentage { /* Porcentaje de habilidades en barras */
+    display: block;
+    background: var(--primary-color);
 }
